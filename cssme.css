@@ -1,0 +1,101 @@
+.parent{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.child2{
+    display: flex;
+    gap: 20px;
+}
+.a1{
+    display: none;
+}
+.b1{
+    display: none;
+}
+@media (max-width:400px){
+    .parent{
+        display: flex;
+        position: relative;
+        padding: 10px;
+        /* flex-direction: column; */
+    }
+    .child2{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        top: 70px;
+        left: 0px;
+        background-color: aliceblue;
+        width: 100%;
+    }
+    .b1{
+        display: block;
+    }
+    .a1:checked ~ .child2{
+        display: flex;
+        flex-direction: column;
+        /* background-color: aliceblue; */
+    }
+}
+@media (min-width:401px) and (max-width:768vw){
+    .parent{
+        position: relative;
+        /* flex-direction: column; */
+    }
+    .child2{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 70px;
+        left: 0px;
+        background-color: aliceblue;
+        width: 100%;
+        align-items: center;
+    }
+    .b1{
+        display: block;
+    }
+    .a1:checked ~.child2{
+        display: flex;
+        /* flex-direction: column; */
+    }
+}
+@media (min-width:769px) and (max-width:1024vw){
+    *{
+        font-family: cursive;
+    }
+    .parent{
+        font-size: 2rem;
+        flex-direction: row;
+    }
+    .child2{
+        font-size: 1.2rem;
+    }
+}
+@media (min-width:1025px) and (max-width:1440vw){
+    *{
+        font-family: verdana;
+        font-weight: 500;
+    }
+    .parent{
+        font-size: 2.5rem;
+    }
+    .child2{
+        font-size: 2rem;
+    }
+}
+@media (min-width:1441px) and (max-width:2568vw){
+    *{
+        font-family: verdana;
+        font-weight: 700;
+    }
+    .parent{
+        font-size: 3rem;
+    }
+    child2{
+        font-size: 2.5rem;
+    }
+}
